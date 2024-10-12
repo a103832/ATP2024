@@ -1,0 +1,14 @@
+Código
+
+O código utiliza a função `random` para gerar números aleatórios.
+
+Estrutura do Código
+
+- A função `adivinha()` é responsável por todo o funcionamento do jogo.
+  - 1) gera um numero inteiro aleatorio num itervalo de 0 a 100 inclusive
+  - 2) contagem começa a 0
+  - 3) começamos com a condição ser falsa --> acertou começa como False, e while acertou: verificaria essa condição diretamente.
+  Como acertou é inicialmente False, o laço nunca começaria a rodar, já que a condição seria falsa desde o início. 
+- A variável `valor` armazena o número gerado aleatoriamente.
+- A variável `tentativas` conta quantas tentativas o jogador fez.
+- A variável `acertou` verifica se o jogador já adivinhou o número. --> quando True, o programa para e retornao valor de tentativas em cima criado
