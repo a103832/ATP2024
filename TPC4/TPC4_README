@@ -1,0 +1,74 @@
+1. `criarLista()`
+
+Esta função permite ao usuário criar uma lista de números inteiros. Os passos são:
+
+- Inicializa uma lista vazia chamada `lista`.
+- Solicita ao usuário o número de elementos que deseja adicionar à lista.
+- Utiliza um loop `while` para solicitar que o usuário insira cada elemento, garantindo que os valores sejam entre 1 e 100.
+- Se um número maior que 100 for inserido, imprime uma mensagem de erro. Caso contrário, adiciona o número à lista.
+- Retorna a lista criada.
+
+2. `lerLista(lista)`
+
+Esta função exibe os elementos da lista passada como argumento. Ela faz:
+
+- Imprime a lista no formato "Lista: [elementos]".
+
+3. `soma(lista)`
+
+Esta função calcula e exibe a soma dos elementos da lista. Ela realiza os seguintes passos:
+
+- Utiliza a função `sum()` para calcular a soma total dos elementos da lista.
+- Imprime o total e retorna o valor da soma.
+
+4. `media(lista)`
+
+Esta função calcula e exibe a média dos elementos da lista. O funcionamento é o seguinte:
+
+- Chama a função `soma()` para obter a soma dos elementos.
+- Calcula a média dividindo o total pelo número de elementos da lista.
+- Imprime a média e retorna o valor calculado.
+
+5. `maior(lista)`
+
+Esta função encontra e exibe o maior elemento da lista. Os passos são:
+
+- Inicializa a variável `maior` com o primeiro elemento da lista.
+- Utiliza um loop `for` para percorrer cada elemento da lista, atualizando a variável `maior` se encontrar um número maior.
+- Imprime o maior elemento encontrado e retorna esse valor.
+
+### 6. `menor(lista)`
+
+Esta função encontra e exibe o menor elemento da lista. O funcionamento é similar ao da função `maior()`:
+
+- Inicializa a variável `menor` com o primeiro elemento da lista.
+- Percorre a lista e atualiza `menor` se encontrar um elemento menor.
+- Imprime o menor elemento encontrado e retorna esse valor.
+
+7. `crescente(lista)`
+
+Esta função verifica se a lista está ordenada em ordem crescente. Os passos são:
+
+- Utiliza um loop `for` para comparar cada elemento com o próximo.
+- Se algum elemento for maior que o próximo, imprime "Não" e retorna `False`.
+- Se todos os elementos estiverem na ordem correta, imprime "Sim" e retorna `True`.
+
+8. `decrescente(lista)`
+
+Esta função verifica se a lista está ordenada em ordem decrescente. O funcionamento é semelhante ao da função `crescente()`:
+
+- Percorre a lista comparando cada elemento com o próximo.
+- Se algum elemento for menor que o próximo, imprime "Não" e retorna `False`.
+- Se todos os elementos estiverem na ordem correta, imprime "Sim" e retorna `True`.
+
+9. `procura(x, lista)`
+
+Esta função procura um elemento específico na lista. O funcionamento é o seguinte:
+
+- Verifica se o elemento `x` está presente na lista.
+- Se encontrado, imprime a posição do elemento usando `index()`.
+- Se não encontrado, imprime "-1".
+
+### 10. `menu()`
+
+Esta função exibe um menu com as opções disponíveis para o usuário. As opções são as dadas no enunciado.
