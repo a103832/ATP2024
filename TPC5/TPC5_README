@@ -1,0 +1,16 @@
+Funções:
+- disponivel(Cinema,filme,lugar), retornamos o valor boleano para se estiver (TRUE) ou não (FALSE) o lugar ocupado
+  - if filme == sala[3] and lugar  not in sala[2]: --> ou seja, para um filme na lista (sala[3]) e se o lugar nao estiver na 
+  lista de lugares ocupados (sala[2]), então esse lugar esta livre e retorna True
+- vendeBilhete(Cinema,filme,modo) ---> realiza a escolha automática de lugares de forma aleatória
+
+Quando o `modo` é `"Não"`, a função executa os seguintes passos:
+- Procura a sala do filme: A função percorre todas as salas disponíveis no `Cinema` e verifica se o filme que o cliente deseja está a ser exibido naquela sala.
+- Seleção aleatória de um lugar: 
+   - Após encontrar a sala certa, a função tenta escolher aleatoriamente um lugar disponível dentro da sala.
+   - A escolha é feita por meio da função `random.randrange`, que gera um número aleatório dentro do intervalo de lugares disponíveis na sala.
+- Reserva do lugar:
+   - Se o lugar estiver disponível, ele é adicionado à lista de lugares ocupados daquela sala, e uma mensagem de confirmação é exibida.
+   - Caso o lugar esteja ocupado, a função continuará tentando até encontrar um lugar disponível.
+
+
