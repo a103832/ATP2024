@@ -1,0 +1,56 @@
+Funções
+1. `jogador(restantes)`
+
+Esta função solicita que o jogador escolha quantos fósforos remover, garantindo que a escolha esteja dentro dos limites permitidos. Ela realiza os seguintes passos:
+
+- Inicializa a variável `jogada` com 0.
+- Entra em um loop que continua até que o jogador faça uma jogada válida (um número entre 1 e 4 que não exceda os fósforos restantes).
+- Usa `input()` para receber a jogada do jogador e a converte em um número inteiro.
+- Se a jogada não for válida, exibe uma mensagem de erro.
+- Retorna o número de fósforos que o jogador decidiu remover.
+
+2. `computador(restantes)`
+
+Esta função determina a jogada do computador. O computador tenta sempre remover 4 fósforos, exceto quando restam 4 ou menos, caso em que ele removerá todos os fósforos restantes menos um. A função executa os seguintes passos:
+
+- Verifica se o número de fósforos restantes é maior que 4. Se sim, define `jogada` como 4.
+- Caso contrário, calcula a jogada como `restantes - 1` para tentar deixar apenas um fósforo para o jogador.
+- Exibe quantos fósforos o computador removeu.
+- Retorna o número de fósforos que o computador decidiu remover.
+
+3. `modo_1()`
+
+Esta função implementa o primeiro modo de jogo, onde o jogador começa. O jogo ocorre da seguinte maneira:
+
+- Inicializa a variável `fosforos` com 21.
+- Exibe uma mensagem informando que o jogador começa.
+- Entra em um loop que continua enquanto houver fósforos restantes:
+  - Chama a função `jogador()` para obter a jogada do jogador e subtrai essa quantidade de fósforos.
+  - Se o total de fósforos chega a 0 após a jogada do jogador, imprime que o computador venceu e encerra a função.
+  - Chama a função `computador()` para determinar a jogada do computador e subtrai essa quantidade de fósforos.
+  - Se o total de fósforos chega a 0 após a jogada do computador, imprime que o jogador venceu e encerra a função.
+
+4. `modo_2()`
+
+Esta função implementa o segundo modo de jogo, onde o computador começa. O funcionamento é semelhante ao modo 1:
+
+- Inicializa a variável `fosforos` com 21.
+- Exibe uma mensagem informando que o computador começa.
+- Entra em um loop que continua enquanto houver fósforos restantes:
+  - Chama a função `computador()` para obter a jogada do computador e subtrai essa quantidade de fósforos.
+  - Se o total de fósforos chega a 0 após a jogada do computador, imprime que o computador perdeu e encerra a função.
+  - Chama a função `jogador()` para obter a jogada do jogador e subtrai essa quantidade de fósforos.
+  - Se o total de fósforos chega a 0 após a jogada do jogador, imprime que o jogador perdeu e encerra a função.
+
+5. `menu()`
+
+Esta função exibe o menu principal do jogo e permite que o jogador escolha o modo de jogo. Ela faz o seguinte:
+
+- Exibe uma mensagem de boas-vindas.
+- Oferece opções para o jogador escolher entre dois modos: onde o jogador começa ou o computador começa.
+- Usa um loop para garantir que a escolha do jogador seja válida (1 ou 2).
+- Dependendo da escolha, chama a função correspondente (`modo_1()` ou `modo_2()`).
+
+. `__main__`
+
+A seção `if __name__ == "__main__":` garante que o menu seja exibido e o jogo comece apenas se o script for executado diretamente.
