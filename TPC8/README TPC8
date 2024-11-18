@@ -1,0 +1,106 @@
+**TPC1**
+a.
+Este código combina elementos que não são comuns a ambas as listas ao mesmo tempo:  
+- `ncomuns`: Utiliza duas compreensões de lista para incluir:  
+  - Elementos de `lista1` que não estão em `lista2`.  
+  - Elementos de `lista2` que não estão em `lista1`.  
+- `nao_comuns`: Cria uma lista única com todos os elementos de ambas as listas (`lista1 + lista2`), mas exclui os que aparecem em ambas.  
+
+Ambas as abordagens resultam numa lista com elementos que aparecem apenas numa das listas, sem repetidos.  
+b.
+Divide um texto em palavras usando o método `split`.  
+As palavras com mais de 3 letras são armazenadas numa lista chamada `lista`.  
+
+c.
+Percorre as palavras da lista e imprime o índice + 1 (para evitar o 0) e a palavra correspondente.  
+
+---
+
+**TPC2**
+
+**a.**  
+Recebe uma string e uma substring e verifica quantas vezes a substring aparece na string principal.  
+
+**b.**  
+Recebe uma lista de números:  
+1. Ordena-a de menor para maior (`sort`).  
+2. Calcula o produto dos três números mais pequenos.  
+3. Retorna o resultado.  
+
+**c.**  
+Reduz um número inteiro a um único dígito, somando os seus dígitos repetidamente até restar apenas um dígito.  
+Enquanto o número tiver mais de um dígito (`num >= 10`):  
+1. Calcula a soma dos seus dígitos.  
+2. Atualiza `num` com o valor da soma.  
+
+**d)**  
+A função `myIndexOf(s1, s2)` procura a posição de uma substring (`s2`) dentro de uma string (`s1`):  
+- Se `s2` estiver em `s1`, retorna a posição da primeira ocorrência com `index`.  
+- Caso contrário, retorna `-1`.  
+
+---
+
+**TPC3**
+
+**a.**  
+Conta o número total de posts.  
+
+**b.**  
+Verifica quantos posts pertencem a um autor específico, pesquisando pelo seu nome.  
+
+**c.**  
+Adiciona autores de posts que ainda não estão incluídos na lista de autores.  
+
+**d)**  
+**Função `insPost`:**  
+- **Parâmetros:**  
+  - `redeSocial`: Lista que contém os posts.  
+  - `conteudo`: Texto do post.  
+  - `autor`: Nome do autor.  
+  - `dataCriacao`: Data do post.  
+  - `comentarios`: Número inicial de comentários.  
+- **Processo:**  
+  - Cria um dicionário para o post com as chaves:  
+    - `'id'`: Identificador único no formato `'pX'`, onde X é o total de posts + 1.  
+    - `'conteudo'`: Texto do post.  
+    - `'autor'`: Nome do autor.  
+    - `'dataCriacao'`: Data como string.  
+    - `'comentarios'`: Número de comentários.  
+  - Adiciona o post à `redeSocial` com `.append()`.  
+- **Retorno:**  
+  - A lista `redeSocial` atualizada.  
+
+**e.**  
+**Função para remover um post:**  
+- **Parâmetros:**  
+  - `redeSocial`: Lista de posts.  
+  - `id`: Identificador do post a remover.  
+- **Processo:**  
+  - Percorre os posts da lista.  
+  - Compara o `id` do post atual com o fornecido.  
+  - Remove o post correspondente usando `.remove(post)`.  
+- **Retorno:**  
+  - Lista `redeSocial` sem o post removido.  
+
+**f.**  
+**Função para listar posts e autores:**  
+- **Parâmetros:**  
+  - `redeSocial`: Lista de posts, onde cada post é um dicionário.  
+- **Processo:**  
+  - Cria uma lista de tuplas no formato `(autor, post)`.  
+  - Adiciona o autor e o post inteiro a cada iteração.  
+- **Retorno:**  
+  - A lista de tuplas.  
+
+**g.**  
+**Função para encontrar comentários de um autor:**  
+- **Parâmetros:**  
+  - `redeSocial`: Lista de posts.  
+  - `autor`: Nome do autor dos comentários.  
+- **Processo:**  
+  - Cria uma lista para armazenar posts relevantes.  
+  - Percorre os posts e os comentários de cada post.  
+  - Verifica se o autor do comentário corresponde ao fornecido.  
+  - Adiciona o post à lista caso encontre correspondência.  
+- **Retorno:**  
+  - Lista de posts onde o autor especificado comentou.
