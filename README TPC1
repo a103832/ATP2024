@@ -1,0 +1,19 @@
+A imagem apresenta um exercício do **Blockly Games: Turtle**, onde o objetivo é desenhar uma árvore, uma casa e um sol.
+
+### Resumo do raciocínio:
+
+1. **Casa (Direita)**  
+   - **Movimentação inicial:** A tartaruga é posicionada corretamente antes de começar.  
+   - **Desenho:** Um quadrado é criado com um `repeat 4 times`, seguido por um triângulo para o telhado, usando ângulos específicos.  
+
+2. **Árvore (Esquerda)**  
+   - **Movimentação inicial:** A tartaruga ajusta-se à posição da árvore.  
+   - **Desenho:** A copa é um semicírculo e o tronco, um retângulo simples, ambos feitos com loops e rotações.  
+
+3. **Sol (Topo)**  
+   - **Movimento Circular:** Um círculo completo é desenhado com `repeat 360 times`, combinando pequenos avanços (0.5) e rotações (1 grau).
+
+### Estrutura do código:
+- **Loops** para formas geométricas (quadrado, círculo).  
+- **Comandos precisos** para posicionar e orientar a tartaruga.  
+- **Cálculo de ângulos e tamanhos** para ajustar cada figura, como o telhado e a copa da árvore.
