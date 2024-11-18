@@ -1,0 +1,54 @@
+# Resumo Meteorológico
+
+Este programa, desenvolvido em Python, facilita a análise de dados meteorológicos diários, como temperaturas mínima e máxima, amplitude térmica e precipitação. Ele oferece ferramentas para calcular estatísticas climáticas e criar gráficos baseados em uma tabela de dados meteorológicos.
+
+## Recursos Disponíveis
+
+O programa possui um menu com as opções abaixo:
+
+1. **Cálculo da temperatura média diária**: Determina a temperatura média diária usando as temperaturas mínima e máxima.
+2. **Salvar tabela em arquivo**: Armazena os dados meteorológicos em um arquivo de texto.
+3. **Carregar tabela de arquivo**: Lê dados meteorológicos de um arquivo de texto.
+4. **Menor temperatura mínima registrada**: Mostra o menor valor de temperatura mínima encontrado.
+5. **Cálculo da amplitude térmica média**: Determina a diferença média entre as temperaturas máxima e mínima.
+6. **Maior precipitação registrada**: Identifica o dia e o valor da maior precipitação.
+7. **Dias com precipitação acima de um valor `p`**: Lista os dias onde a precipitação superou o valor especificado (`p`).
+8. **Maior sequência de dias com precipitação abaixo de `p`**: Conta o maior número consecutivo de dias com precipitação inferior a um valor fornecido (`p`).
+9. **Gráficos de temperatura e precipitação**: Cria gráficos de linha para temperaturas e de barras para precipitação.
+
+0. **Sair do programa**: Finaliza a execução do programa.
+
+## Passos para Utilização
+
+1. **Início do Programa**: Execute o código para abrir o menu principal.
+2. **Escolha de Funções**: No menu, selecione a opção desejada digitando o número correspondente.
+3. **Entrada para Precipitação (`p`)**: As opções 7 e 8 requerem a inserção de um valor de precipitação (`p`) pelo usuário.
+4. **Exibição de Gráficos**: A opção 9 gera gráficos que mostram variações de temperatura mínima, máxima e precipitação ao longo do tempo.
+
+## Funções Implementadas
+
+### Funções Essenciais
+
+- **mostrar_menu**: Mostra o menu de opções ao usuário.
+- **medias(tabMeteo)**: Calcula a temperatura média diária.
+- **guardatabMeteo(t, fnome)**: Grava os dados meteorológicos em um arquivo de texto.
+- **carregatabMeteo(fnome)**: Lê os dados meteorológicos de um arquivo de texto.
+- **minMin(tabMeteo)**: Identifica a menor temperatura mínima registrada.
+- **amplTerm(tabMeteo)**: Calcula a amplitude térmica.
+- **maxChuva(tabMeteo)**: Determina o dia e o valor da maior precipitação.
+- **diasChuvosos(tabMeteo, p)**: Lista os dias com precipitação superior a `p`.
+- **maxPeriodoCalor(tabMeteo, p)**: Calcula a maior sequência de dias com precipitação inferior a `p`.
+- **grafTabMeteo(t)**: Cria gráficos de temperaturas mínima, máxima e precipitação.
+
+### Exemplo de Dados
+
+A tabela meteorológica (`tabMeteo1`) é estruturada como:
+
+```python
+tabMeteo1 = [
+    ((2022, 1, 20), 2, 16, 0),
+    ((2022, 1, 21), 1, 13, 0.2),
+    ((2022, 1, 22), 7, 17, 0.01)]
+```
+
+- **Formato dos dados**: `((ano, mês, dia), temperatura mínima, temperatura máxima, precipitação)`
